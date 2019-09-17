@@ -1,13 +1,9 @@
 {{link-to "Back to list of orgs" "orgs"}}
-
-<h4>Facebook</h4>
-
-<span {{action 'addToRecords' 'Two'}}>Me!!!!</span>
-
-<ul>
-  {{#each records as |record|}}
-    <li>{{record.id}}</li>
-  {{/each}}
-</ul>
+<div>
+  <img src={{this.model.avatar_url}} alt={{this.model.name}} width="200" height="200">
+  <h4>
+    {{this.model.name}}
+  </h4>
+</div>
 
 {{outlet}}
