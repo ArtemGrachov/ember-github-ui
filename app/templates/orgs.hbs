@@ -1,9 +1,9 @@
 <h2>My Favorite Orgs</h2>
 
 <ul>
-  <li>{{link-to "jQuery" "org.repos" "jquery"}}</li>
-  <li>{{link-to "Ember" "org.repos" "emberjs"}}</li>
-  <li>{{link-to "Netflix" "org.repos" "netflix"}}</li>
+  {{#each this.model as |org|}}
+    <li>{{link-to org.id "org" org.id}}</li>
+  {{/each}}
 </ul>
 
 {{outlet}}
