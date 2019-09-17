@@ -18,6 +18,9 @@ export default Route.extend({
   actions: {
     favoriteClicked(org) {
       this.get('favorites.items').addObject(org);
+    },
+    linksToggled() {
+      console.log('links toggled')
     }
   }
 });
