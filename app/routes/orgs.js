@@ -17,7 +17,11 @@ export default Route.extend({
 
   actions: {
     favoriteClicked(org) {
-      this.get('favorites.items').addObject(org);
+      if (this.get('favorites.items').indexOf(org) === -1) {
+        this.get('favorites').favoriteItem(org);
+      } else {
+        this.get('favorites').unfavoriteItem(org);
+      }
     },
     linksToggled() {
       console.log('links toggled')
