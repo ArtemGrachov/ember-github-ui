@@ -1,1 +1,19 @@
 @import "bourbon";
+
+.repo-nav {
+  list-style: none;
+
+  li {
+    display: inline-block;
+
+    a {
+      font-weight: thin;
+      text-decoration: none;
+
+      &.active {
+        font-weight: bolder;
+        text-decoration: underline;
+      }
+    }
+  }
+}
