@@ -1,8 +1,17 @@
+import Ember from 'ember';
 import Route from '@ember/routing/route';
 
 export default Route.extend({
-  beforeModel() {
+  authentication: Ember.inject.service(),
+
+  setupController(controller) {
     this._super(...arguments);
-    this.transitionTo('org.repos');
+    controller.set('records', this.get('authentication.records'))
+  },
+
+  actions: {
+    addToRecords(id) {
+      this.get('authentication.records').addObject({id})
+    }
   }
 });

@@ -2,4 +2,12 @@
 
 <h4>Facebook</h4>
 
+<span {{action 'addToRecords' 'Two'}}>Me!!!!</span>
+
+<ul>
+  {{#each records as |record|}}
+    <li>{{record.id}}</li>
+  {{/each}}
+</ul>
+
 {{outlet}}
