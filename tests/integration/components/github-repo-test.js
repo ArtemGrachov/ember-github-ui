@@ -12,7 +12,11 @@ module('Integration | Component | github-repo', function(hooks) {
 
     await render(hbs`<GithubRepo />`);
 
-    assert.equal(this.element.textContent.trim(), '');
+    assert.equal(this.element.textContent.trim(),
+`(
+  Forks:  |
+  Watchers: 
+)`);
 
     // Template block usage:
     await render(hbs`
@@ -21,6 +25,10 @@ module('Integration | Component | github-repo', function(hooks) {
       </GithubRepo>
     `);
 
-    assert.equal(this.element.textContent.trim(), 'template block text');
+    assert.equal(this.element.textContent.trim(), 
+`(
+  Forks:  |
+  Watchers: 
+)`);
   });
 });

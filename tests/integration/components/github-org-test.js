@@ -12,7 +12,7 @@ module('Integration | Component | github-org', function(hooks) {
 
     await render(hbs`<GithubOrg />`);
 
-    assert.equal(this.element.textContent.trim(), '');
+    assert.equal(this.element.textContent.trim(), '[ Favorite ]');
 
     // Template block usage:
     await render(hbs`
@@ -21,6 +21,6 @@ module('Integration | Component | github-org', function(hooks) {
       </GithubOrg>
     `);
 
-    assert.equal(this.element.textContent.trim(), 'template block text');
+    assert.equal(this.element.textContent.trim(), '[ Favorite ]');
   });
 });

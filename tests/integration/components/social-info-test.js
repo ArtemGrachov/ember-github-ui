@@ -12,7 +12,7 @@ module('Integration | Component | social-info', function(hooks) {
 
     await render(hbs`<SocialInfo />`);
 
-    assert.equal(this.element.textContent.trim(), '');
+    assert.equal(this.element.textContent.trim(), '[ Expand ]');
 
     // Template block usage:
     await render(hbs`
@@ -21,6 +21,6 @@ module('Integration | Component | social-info', function(hooks) {
       </SocialInfo>
     `);
 
-    assert.equal(this.element.textContent.trim(), 'template block text');
+    assert.equal(this.element.textContent.trim(), '[ Expand ]');
   });
 });
