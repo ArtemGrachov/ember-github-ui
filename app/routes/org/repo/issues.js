@@ -1,7 +1,7 @@
 import Route from '@ember/routing/route';
 
 export default Route.extend({
-  model(params) {
+  model() {
     const orgId = this.modelFor('org').login;
     const repoId = this.modelFor('org.repo').name;
 

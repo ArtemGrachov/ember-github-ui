@@ -1,6 +1,6 @@
 <li>
-  <span {{action 'favoriteClicked' org}}>
-    [ {{unless isFavorited 'Favorite' 'Unfavorite'}} ]
-  </span>
-  {{link-to org.id 'org' org.id}}
+  <button type="button" {{action "favoriteClicked" org}}>
+    [ {{unless isFavorited "Favorite" "Unfavorite"}} ]
+  </button>
+  {{link-to org.id "org" org.id}}
 </li>

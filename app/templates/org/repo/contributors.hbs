@@ -8,10 +8,10 @@
   {{#each this.model as |contributor|}}
     <li>
       <p>
-        <img src="{{contributor.avatar_url}}" alt="{{contributor.login}}" width="200" height="200">
+        <img src={{contributor.avatar_url}} alt={{contributor.login}} width="200" height="200">
       </p>
       <p>
-        <a href={{contributor.html_url}} target="_blank">
+        <a href={{contributor.html_url}} target="_blank" rel="noopener">
           {{contributor.login}}
         </a>
       </p>

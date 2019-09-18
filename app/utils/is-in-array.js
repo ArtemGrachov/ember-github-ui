@@ -1,5 +1,4 @@
-import Ember from 'ember';
-const  { computed } = Ember;
+import { computed } from '@ember/object';
 
 export default function isInArray(itemKey, listKey) {
   return computed(itemKey, `${listKey}.[]`, function() {

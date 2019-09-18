@@ -1,7 +1,7 @@
 import Route from '@ember/routing/route';
 
 export default Route.extend({
-  model(params) {
+  model() {
     let orgId = this.modelFor('org').login;
     return $.get(`https://api.github.com/orgs/${orgId}/repos`)
       .then(rawRepos => {

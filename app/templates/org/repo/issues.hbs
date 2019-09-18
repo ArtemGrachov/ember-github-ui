@@ -7,7 +7,7 @@
 <ul>
   {{#each this.model as |issue|}}
     <li>
-      <a href={{issue.html_url}} target="_blank">{{issue.title}}</a>
+      <a href={{issue.html_url}} target="_blank" rel="noopener">{{issue.title}}</a>
     </li>
   {{/each}}
 </ul>
